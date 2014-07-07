@@ -47,6 +47,7 @@
 			});
 			
 			function openTab(node){
+				if(!node || !node.name)return;
 				var isexists = $("#main_tab").tabs("exists",node.name);
 				if(isexists){
 					$("#main_tab").tabs("select",node.name);
@@ -54,7 +55,8 @@
 					$("#main_tab").tabs("add",{
 						title:node.name,
 						closable:true,
-						href:node.url
+						href:node.url,
+						loadingMessage:'加载中......'
 					});
 				}
 			}
@@ -67,10 +69,6 @@
 	<div data-options="region:'north'" style="overflow:hidden;height:50px;background-image:url('/member/img/header_bg.png');background-position:0% 100%">
 		<h2 style="color: white;margin-left: 30px;font-weight:bolder; font-family:'YouYuan' ">萌丫头后台管理系统</h2>
 	</div>
-	<div data-options="region:'south'" style="height:30px;background:#102A48;text-align: center;line-height: 30px;color:white;">
-		黑色经典
-	</div>
-	
 	<div data-options="region:'west'" title="菜单管理" style="width:240px;padding1:1px;overflow:hidden;">
 		<ul id="menu_tree">
 		</ul>
@@ -82,6 +80,8 @@
 			</div>
 		</div>
 	</div>
+	<div data-options="region:'south'" style="height:30px;text-align: center;color:white;">
+		<div style="width: 100%;height: 100%;line-height: 30px;text-align: center;overflow: hidden;">黑色经典</div>
 	</div>
 </body>
 </html>

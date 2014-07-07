@@ -9,8 +9,7 @@
 <property column="img_context" length="100" name="imgContext" type="java.lang.String"/>
 <property column="img_url" length="255" name="imgUrl" type="java.lang.String"/>
 <property column="create_time" length="19" name="createTime" not-null="true" type="java.util.Date"/>
-<property column="img_width" length="11" name="imgWidth" type="java.lang.Integer"/>
-<property column="img_height" length="11" name="imgHeight" type="java.lang.Integer"/>
 <property column="img_uploader" length="20" name="imgUploader" type="java.lang.String"/>
+<property column="http_url" length="255" name="httpUrl" type="java.lang.String"/>
 </class>
 </hibernate-mapping>

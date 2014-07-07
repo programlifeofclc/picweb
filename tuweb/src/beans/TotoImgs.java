@@ -26,23 +26,18 @@ public class TotoImgs implements Serializable {
     private Date createTime;
 
     /** nullable persistent field */
-    private Integer imgWidth;
-
-    /** nullable persistent field */
-    private Integer imgHeight;
-
-    /** nullable persistent field */
     private String imgUploader;
 
+    private String httpUrl;
+    
     /** full constructor */
-    public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime, Integer imgWidth, Integer imgHeight, String imgUploader) {
+    public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime,String imgUploader,String httpUrl) {
         this.imgName = imgName;
         this.imgContext = imgContext;
         this.imgUrl = imgUrl;
         this.createTime = createTime;
-        this.imgWidth = imgWidth;
-        this.imgHeight = imgHeight;
         this.imgUploader = imgUploader;
+        this.httpUrl = httpUrl;
     }
 
     /** default constructor */
@@ -94,22 +89,6 @@ public class TotoImgs implements Serializable {
         this.createTime = createTime;
     }
 
-    public Integer getImgWidth() {
-        return this.imgWidth;
-    }
-
-    public void setImgWidth(Integer imgWidth) {
-        this.imgWidth = imgWidth;
-    }
-
-    public Integer getImgHeight() {
-        return this.imgHeight;
-    }
-
-    public void setImgHeight(Integer imgHeight) {
-        this.imgHeight = imgHeight;
-    }
-
     public String getImgUploader() {
         return this.imgUploader;
     }
@@ -118,7 +97,15 @@ public class TotoImgs implements Serializable {
         this.imgUploader = imgUploader;
     }
 
-    public String toString() {
+    public String getHttpUrl() {
+		return httpUrl;
+	}
+
+	public void setHttpUrl(String httpUrl) {
+		this.httpUrl = httpUrl;
+	}
+
+	public String toString() {
         return new ToStringBuilder(this)
             .append("id", getId())
             .toString();
