@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+   <package name="default" namespace="/" extends="struts-default">
+        <default-action-ref name="index" />
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="index">/index.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+        
+        <action name="login" class="loginAction">
+           <result name="login" >/owner_login.jsp</result>
+           <result name="success" >/member/index.jsp</result>
+        </action>
+        
+        <action name="upload/*" class="uploadFileAction" method="{1}">
+        
+        </action>
+        
+    </package>
+</struts>

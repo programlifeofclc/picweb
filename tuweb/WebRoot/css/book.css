@@ -1,0 +1,160 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	text-decoration: none;
+}
+.top{
+	height: 25px;
+	border-radius:0px 0px 5px 5px;
+	background-color:#1283CA;
+	width: 1200px;
+	position:fixed;
+	left:0px;right:0px;
+	margin:0px auto;
+	box-shadow: 0px 0px 1px #000 ;
+	z-index: 2
+}
+.top_ner{
+	height: 30px;
+}
+.logo{
+	background:#FFF;
+	height: 100px;
+	width: 1200px;
+	margin:0px auto;
+	border-radius:10px 10px 0px 0px;
+	border:1px #999 solid;
+	border-bottom:none;
+}
+#logoimg{
+	width: 400px;
+	height: 98px;
+	border-radius:10px;
+}
+.daohang_outer{
+	margin:0px auto;
+	width:1230px;
+	background: #FFF;
+	height: 38px;
+	overflow: hidden;
+	border:1px #999 solid;
+	border-radius: 5px;
+}
+.daohang_inner{
+	margin:5px auto;
+	width: 1200px;
+	background: #5F851C;
+	height: 26px;
+	border-radius:6px 26px 6px 26px;
+}
+.daohang_ul{
+	width: 1120px;
+	margin:0px auto;
+}
+.daohang_ul li{
+	float:left;
+	max-width:200px;
+	padding:0px 20px;
+	text-align: center;
+	list-style: none;
+	height: 26px;
+	border-radius:6px 26px 6px 26px;
+	line-height:26px;
+	cursor: pointer;
+	color:#fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+.daohang_ul li:HOVER{
+	background:#FFF;
+	color:#000;
+}
+
+.daohang_small{
+	width: 1200px;
+	height: 20px;
+	border:1px #AAA solid;
+	border-top:none;
+	border-radius:0px 0px 3px 3px;
+	margin: 0px auto;
+	background: #fff;
+	line-height:20px;
+	text-align: center;
+	font-size: 12px;
+}
+.daohang_small a{
+	color:#666;
+}
+
+.clear_both{
+	clear:both;
+}
+.sousuo_small{
+	width: 1200px;
+	height: 28px;
+	margin: 1px auto 0px;
+	background: #fff;
+}
+.sousuo_type{
+	border:1px #ABAEBD solid;
+	width:80px;
+	height: 28px;
+	text-align: center;
+}
+.sousuo_type option{
+	text-align: center;
+}
+.sousuo_text{
+	border:1px #ABAEBD solid;
+	width:200px;
+	height: 28px;
+	border-left: none;
+}
+.sousuo_button{
+	width:80px;
+	height: 28px;
+	background: #E76D1C;
+	border:1px #FF9647 solid;
+	border-radius:1px;
+	font-weight: bold;
+	font-size:14px;
+	color: white;
+	cursor:pointer;
+}
+.context_one{
+	margin:0px auto;
+	width: 1200px;
+	background: #fff;
+}
+.context_one_1{
+	height: 500px;
+	width:250px;
+	border:1px #CCC solid;
+}
+.context_one_tuijian{
+	float:left;
+	width: 124px;
+	height:30px;
+	background:#FFF;
+	border:2px #FFF solid;
+}
+.backgrd{
+	background:#666;
+	border:2px #666 solid;
+	
+}
+.context_one_tuijian_con{
+	clear: both;
+	font-size: 12px;
+}
+.context_one_tuijian_con li{
+	border-bottom:1px #DDD solid;
+	list-style:none;
+	height:22px;
+	line-height: 22px;
+	padding-left: 20px;
+}

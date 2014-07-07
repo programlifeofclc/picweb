@@ -1,0 +1,78 @@
+.context_left_1{
+	border:10px #EEE solid;
+	width: 800px;
+	height:400px;
+	box-shadow: 0px 0px 5px #264E03;
+	border-radius:9px;
+	overflow:hidden;
+}
+.letdiv{
+	float:right;
+	overflow:hidden;
+}
+.letdiv_minbox{
+	cursor:pointer;
+	background: #729316;
+	margin: 0px auto;
+	border-radius:6px;
+}
+.letdiv_minbox:HOVER{
+	background:#2A4909;
+}
+.letdiv_upbox{
+	position:absolute;
+	z-index:1;
+	height:20px;
+	cursor: pointer;
+	text-align:center;
+	filter:alpha(opacity=0.01);
+	-moz-opacity:0.01;
+	-khtml-opacity: 0.01;
+	opacity: 0.01;
+	background-image: url("../img/up.png");
+}
+.letdiv_downbox{
+	position:absolute;
+	z-index:2;
+	margin-top:-20px;
+	height:20px;
+	cursor: pointer;
+	text-align:center;
+	filter:alpha(opacity=0.01);
+	-moz-opacity:0.01;
+	-khtml-opacity: 0.01;
+	opacity: 0.01;
+	background-image: url("../img/down.png");
+}
+.letdiv_midbox{
+	overflow:hidden;
+	z-index:1;
+	text-align: center;
+	border-radius:3px;
+}
+.letdiv_midbox a{
+	margin:0px auto;
+	display:block;
+	width:150px;
+	height: 80px;
+	border:2px #fff solid;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+.letdiv_midbox img{
+	width:100%;
+	height: 100%;
+	border-radius:6px;
+	box-shadow: 2px 2px 5px #000;
+}
+.letdiv_img{
+	border-radius:2px;
+	border:2px #fff solid;
+	cursor:pointer;
+	box-shadow: 0px 0px 10px #000;
+}
+.letdiv_img:HOVER{
+	box-shadow: 0px 0px 10px #000;
+}
