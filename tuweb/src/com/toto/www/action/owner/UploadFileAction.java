@@ -37,7 +37,8 @@ public class UploadFileAction {
 		totoimg.setImgContext(imgContext);
 		totoimg.setImgName(uploadFileFileName);
 		totoimg.setImgUploader("clc");
-		totoimg.setImgUrl(path + imgRootPath);
+		totoimg.setImgUrl(imgRootPath);
+		totoimg.setBasePath(path);
 		try{
 		uploadService.saveImg(uploadFile,totoimg);
 		}catch(Exception e){

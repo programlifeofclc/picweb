@@ -21,9 +21,13 @@ public class UploadService extends BaseService {
 	public void saveImg(File file,TotoImgs totoImgs) throws IOException{
 		String FileType = totoImgs.getImgName().substring(totoImgs.getImgName().lastIndexOf(".")+1);
 		String dir = UpFileUtils.getRanName();
+		totoImgs.setImgUrl(totoImgs.getImgUrl() + dir);
+		String basePath = totoImgs.getBasePath() + totoImgs.getImgUrl();
 		
-		UpFileUtils.NokeepScaleFile(file, totoImgs.getImgUrl() + dir +"/", "img_200_100." + FileType , 200, 100, 1, null);
-		FileUtils.copyFile(file, new File(totoImgs.getImgUrl() + dir +"/img." + FileType));
+		UpFileUtils.NokeepScaleFile(file, basePath + "/", "img_32_32." + FileType , 32, 32, 1, null);
+		UpFileUtils.NokeepScaleFile(file, basePath + "/", "img_200_100." + FileType , 200, 100, 1, null);
+		FileUtils.copyFile(file, new File(basePath + "/img." + FileType));
+		baseDao.saveOrUpdate(totoImgs);
 	}
 	
 	public static void main(String[] args) {

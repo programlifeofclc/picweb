@@ -30,6 +30,8 @@ public class TotoImgs implements Serializable {
 
     private String httpUrl;
     
+    private String basePath;
+    
     /** full constructor */
     public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime,String imgUploader,String httpUrl) {
         this.imgName = imgName;
@@ -111,7 +113,15 @@ public class TotoImgs implements Serializable {
             .toString();
     }
 
-    public boolean equals(Object other) {
+    public String getBasePath() {
+		return basePath;
+	}
+
+	public void setBasePath(String basePath) {
+		this.basePath = basePath;
+	}
+
+	public boolean equals(Object other) {
         if ( !(other instanceof TotoImgs) ) return false;
         TotoImgs castOther = (TotoImgs) other;
         return new EqualsBuilder()
