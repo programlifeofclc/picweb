@@ -64,5 +64,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ezmorph-1.0.4.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/thumbnailator-0.4.2-all.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

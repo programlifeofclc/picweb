@@ -2,12 +2,15 @@ package com.toto.www.action.owner;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.stereotype.Controller;
+
+import beans.TotoImgs;
 
 import com.toto.www.service.owner.UploadService;
 
@@ -21,13 +24,25 @@ public class UploadFileAction {
 	private String Upload;
 	private String uploadFileContentType;
 	private String uploadFileFileName;
-	
+	private String imgContext;
+	private String imgName;
 	private UploadService uploadService;
+	private String imgRootPath;
 	
 	public String uploadFile() throws IOException{
 		String path = ServletActionContext.getRequest().getRealPath("/");
 		log.error("我是谁");
-		uploadService.saveImg(uploadFile, path, Filename);
+		TotoImgs totoimg = new TotoImgs();
+		totoimg.setCreateTime(new Date());
+		totoimg.setImgContext(imgContext);
+		totoimg.setImgName(uploadFileFileName);
+		totoimg.setImgUploader("clc");
+		totoimg.setImgUrl(path + imgRootPath);
+		try{
+		uploadService.saveImg(uploadFile,totoimg);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		return null;
 	}
 	
@@ -83,4 +98,28 @@ public class UploadFileAction {
 	public void setFilename(String filename) {
 		Filename = filename;
 	}
+	public String getImgContext() {
+		return imgContext;
+	}
+
+	public void setImgContext(String imgContext) {
+		this.imgContext = imgContext;
+	}
+
+	public String getImgName() {
+		return imgName;
+	}
+
+	public void setImgName(String imgName) {
+		this.imgName = imgName;
+	}
+
+	public String getImgRootPath() {
+		return imgRootPath;
+	}
+
+	public void setImgRootPath(String imgRootPath) {
+		this.imgRootPath = imgRootPath;
+	}
+	
 }

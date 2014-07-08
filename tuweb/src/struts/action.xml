@@ -21,7 +21,7 @@
         </action>
         
         <action name="upload/*" class="uploadFileAction" method="{1}">
-        
+        	<param name="imgRootPath">dataImg/</param>
         </action>
         
     </package>
