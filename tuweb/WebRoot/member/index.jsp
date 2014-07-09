@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>html5</title>
-	<link rel="stylesheet" type="text/css" href="/member/js/themes/dark-hive/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/member/js/themes/pepper-grinder/easyui.css">
 	<link rel="stylesheet" type="text/css" href="/member/js/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="/member/css/uploadify.css">
 	<link rel="stylesheet" type="text/css" href="/member/css/upload.css">
