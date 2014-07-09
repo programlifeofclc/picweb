@@ -79,7 +79,27 @@ $.extend({
 });
 
 $.fn.extend({
-	datagrid_clc:function(){
+	datagrid_clc:function(dataGridID,dataGridsetting,paginationID,paginationSetting){
+		//表格配置
+		var defaultOptions = {
+			 	fit:true,
+                fitColumns:true,
+                nowrap: true,
+                striped:true,  
+                singleSelect:true,
+                rownumbers:true,
+                loadMsg:" 加载中.... ",
+               	loadFilter:function(data){
+               		//当加载完成数据后显示分页工具条
+               		if(paginationID){
+               			initPagination1504(data.counts , data.pageSize , data.pageNumber);
+               		}
+               		data.total = data.rows.length;
+               		return data;
+               	}
+            };
+        $.extend(defaultOptions,dataGridsetting?dataGridsetting:{});    
+        
 		
 	}
 
