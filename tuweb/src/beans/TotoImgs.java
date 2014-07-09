@@ -28,18 +28,22 @@ public class TotoImgs implements Serializable {
     /** nullable persistent field */
     private String imgUploader;
 
+    /** nullable persistent field */
     private String httpUrl;
-    
+
+    /** nullable persistent field */
+    private String keyWord;
+
     private String basePath;
-    
     /** full constructor */
-    public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime,String imgUploader,String httpUrl) {
+    public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime, String imgUploader, String httpUrl, String keyWord) {
         this.imgName = imgName;
         this.imgContext = imgContext;
         this.imgUrl = imgUrl;
         this.createTime = createTime;
         this.imgUploader = imgUploader;
         this.httpUrl = httpUrl;
+        this.keyWord = keyWord;
     }
 
     /** default constructor */
@@ -100,18 +104,27 @@ public class TotoImgs implements Serializable {
     }
 
     public String getHttpUrl() {
-		return httpUrl;
-	}
+        return this.httpUrl;
+    }
 
-	public void setHttpUrl(String httpUrl) {
-		this.httpUrl = httpUrl;
-	}
+    public void setHttpUrl(String httpUrl) {
+        this.httpUrl = httpUrl;
+    }
 
-	public String toString() {
+    public String getKeyWord() {
+        return this.keyWord;
+    }
+
+    public void setKeyWord(String keyWord) {
+        this.keyWord = keyWord;
+    }
+
+    public String toString() {
         return new ToStringBuilder(this)
             .append("id", getId())
             .toString();
     }
+    
 
     public String getBasePath() {
 		return basePath;

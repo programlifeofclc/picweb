@@ -1,11 +1,31 @@
 .myup{
 	border: none;
 	border-radius:5px;
-	width: 100%;
-	cursor: pointer;
+	width: 100px;
+	height: 30px;
+	background: #CBD0D3;
+	color: black;
 }
 #start_upload{
-	width: 100%;
+	font-weight:bold;
+	width: 100px;
 	height: 30px;
-	cursor: pointer;
+	border-radius:5px;
+	background: #CBD0D3;
+	border: none;
 }
+#start_upload:HOVER{
+	background: #777777;
+}
+.mytabimg{
+	margin:0px;
+	padding:0px;
+	border:none;
+	vertical-align: top;
+	height: 30px;
+	overflow: hidden;
+}
+.mytabimg td{
+	vertical-align: top;
+	overflow: hidden;
+} 

@@ -37,11 +37,17 @@
 	<div class="easyui-layout" style="width: 100%;height: 100%;">
 		<div data-options="region:'center'" class="easyui-layout" style="overflow: hidden;">
 			<div data-options="region:'center'">
-				图片主题:<input class="easyui-validatebox" validType="minLength[5]">
-				图片简介:<input class="easyui-validatebox" validType="minLength[5]">
-			</div>
-			<div data-options="region:'south'" style="height:30px;overflow: hidden;">
-				<input id="file_upload" name="file_upload" type="file">
+				<table class='mytabimg'>
+					<tr>
+						<td>
+							<input id="file_upload" name="file_upload" type="file">
+						</td>
+						<td>
+							<input id="start_upload"  value="开始上传" type="button" onclick="$('#file_upload').uploadify('upload','*')" >
+						</td>
+					</tr>
+				</table>
+				
 			</div>
 		</div>
 		<div data-options="region:'east'"  style="width:280px;overflow: hidden;" class="easyui-layout">
@@ -50,9 +56,6 @@
 					class="uploadify-queue" 
 					style="width: 100%;overflow:auto;color:#000">
 				</div>
-			</div>
-			<div data-options="region:'south'" style="height:30px;overflow: hidden;">
-				<input id="start_upload"  value="开始上传" type="button" onclick="$('#file_upload').uploadify('upload','*')" >
 			</div>
 		</div>
 	</div>

@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="/member/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="/member/js/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="/member/js/jquery.uploadify.min.js"></script>
+	<script type="text/javascript" src="/member/js/easy_clc_v2.js"></script>
 	
 	<script type="text/javascript">
 		$(function(){
@@ -26,7 +27,8 @@
 									"attributes":{name:"上传图片",url:"/member/upload_img.jsp"}
 								},{
 									"id" : 3,
-									"text" : "功能2"
+									"text" : "图片管理",
+									"attributes":{name:"图片管理",url:"/member/img_manager.jsp"}
 								}]
 					},{
 					"id" : 1,
