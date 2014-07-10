@@ -20,9 +20,20 @@
            <result name="success" >/member/index.jsp</result>
         </action>
         
-        
+        <!-- 文件上传 -->
         <action name="upload/*" class="uploadFileAction" method="{1}">
         	<param name="imgRootPath">dataImg/</param>
+        </action>
+        
+    </package>
+    
+    <package name="json" namespace="/" extends="json-default">
+        <!-- 文件管理 -->
+        <action name="file/*" class="fileManagerAction" method="{1}">
+        	<result type="json" name="jsonstr">
+        		<param name="root">epage</param>
+        	</result>
+        	<result name="index">/index.jsp</result>
         </action>
         
     </package>

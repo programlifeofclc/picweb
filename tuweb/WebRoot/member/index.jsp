@@ -82,8 +82,8 @@
 			</div>
 		</div>
 	</div>
-	<div data-options="region:'south'" style="height:30px;text-align: center;color:white;">
-		<div style="width: 100%;height: 100%;line-height: 30px;text-align: center;overflow: hidden;">黑色经典</div>
+	<div data-options="region:'south'" style="height:30px;text-align: center;">
+		<div style="width: 100%;height: 100%;line-height: 30px;text-align: center;overflow: hidden;">萌丫头系统管理</div>
 	</div>
 </body>
 </html>

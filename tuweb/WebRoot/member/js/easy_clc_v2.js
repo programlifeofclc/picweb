@@ -78,65 +78,55 @@ $.extend({
 			}
 });
 
+
 $.fn.extend({
-	datagrid_clc:function(dataGridsetting){
+	datagrid_clc : function(setting,psetting) {
 		var thiz = this;
-		//表格配置
-		var defaultOptions = {
-			 	fit:true,
-                fitColumns:true,
-                nowrap: true,
-                pagination:true,
-                striped:true,  
-                singleSelect:true,
-                rownumbers:true,
-                loadMsg:" 加载中.... ",
-               	loadFilter:function(data){
-               		//当加载完成数据后显示分页工具条
-//               		if(paginationID){
-//               			initPagination1504(data.counts , data.pageSize , data.pageNumber);
-//               		}
-//               		data.total = data.rows.length;
-//               		return data;
-               		alert(123);
-               		return {"total":239,"rows":[{"code":"001","name":"Name 1","addr":"Address 11","col4":"col4 data"},{"code":"002","name":"Name 2","addr":"Address 13","col4":"col4 data"},{"code":"003","name":"Name 3","addr":"Address 87","col4":"col4 data"}]};
-               	}
-        };
-		//初始化表格
-        $.extend(defaultOptions,dataGridsetting?dataGridsetting:{});    
-        thiz.datagrid(defaultOptions); 
-        
-        thiz.addPagination = function(setting){
-			var defaultPaginaOptions = {
-       			    pageSize:10,
-	   			  	pageList:[10,30,50],
-	   			 	showRefresh:false,
-	   			 	beforePageText:'页数',
-	   			    afterPageText:'共{pages}',
-	   			    displayMsg:'从{from} 到 {to}，共 {total}条',
-	   			 		onSelectPage:function(pages, pageSize){
-	   			 			var queryParams = $dataGrid.datagrid("options").queryParams;
-	   			 			//合并查找对象
-	   			 			$.extend(queryParams, {pageSize:pageSize,pageNumber:pages});
-	   			 			//加载指定页面数据
-	   			 			$dataGrid.datagrid('load',queryParams);
-	   			 		}
-	   				};
-			$.extend(defaultPaginaOptions,setting?setting:{});
-			
-				defaultPaginaOptions.pageNumber = 1;
-			thiz.datagrid('getPager').pagination(defaultPaginaOptions);
-			
-			};
-			
+		// 表格配置
+		var dfOpts = {
+			fit : true,
+			pageNumber:1,
+			fitColumns : true,
+			nowrap : true,
+			pagination : true,
+			striped : true,
+			singleSelect : true,
+			rownumbers : true,
+			loadMsg : " 加载中.... ",
+			loadFilter : function(data) {
+				alert(data.pageNumber);
+				if (dfOpts.pagination) {
+					var dfOps = {
+								showRefresh : false,
+								beforePageText : '页数',
+								afterPageText : '共{pages}',
+								displayMsg : '从{from} 到 {to}，共 {total}条',
+								onSelectPage : function(pages, pageSize) {
+									var queryParams = thiz.datagrid("options").queryParams;
+									// 合并查找对象
+									$.extend(queryParams, {
+												pageSize : pageSize,
+												pageNumber : pages
+											});
+									// 加载指定页面数据
+									thiz.datagrid('load', queryParams);
+									}
+							}
+					$.extend(dfOps,psetting?psetting:{});
+					thiz.datagrid('getPager').pagination(dfOps);
+				}
+				return data;
+			}
+		};
+		// 初始化表格
+		$.extend(dfOpts, setting ? setting : {});
+		thiz.datagrid(dfOpts);
+		
+		
 		return thiz;
 	}
-
-
 
 });
 
 
-
-
-
+ 
