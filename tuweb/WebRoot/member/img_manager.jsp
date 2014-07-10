@@ -14,6 +14,7 @@
 			          {field:'price',title:'Price',width:100,align:'right'}
 			         ]] 
 		}).addPagination({});
+		
 	</script>
 	<div class="easyui-layout" style="width: 100%;height: 100%;">
 		<div data-options="region:'center'" class="easyui-layout" style="overflow: hidden;">
