@@ -56,7 +56,7 @@
 					class="uploadify-queue" 
 					style="width: 100%;overflow:auto;color:#000">
 				</div>
-			</div>
+			</div> 
 		</div>
 	</div>
 </body>

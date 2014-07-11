@@ -1,53 +1,47 @@
 package com.toto.www.action.owner;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 
 import utils.EasyUIPage;
-import utils.Page;
+import beans.TotoImgs;
+
+import com.toto.www.service.owner.TotoImgsService;
 
 @Controller("fileManagerAction")
 public class FileManagerAction {
 	//Logger log = Logger.getLogger(this.getClass());
-	private int pageNumber;
-	private int pageSize;
+	private int page;
+	private int rows;
 	private EasyUIPage epage;
-	
+	@Resource(name="totoImgsService")
+	private TotoImgsService totoImgsService;
 	
 	public String findImgs() throws IOException{
-		List<Object> list = new ArrayList<Object>();
-		for(int i = 0; i < pageSize; i++){
-			Map<String,Object> map = new HashMap<String,Object>();
-			map.put("code", "code"+i);
-			map.put("name", "name"+i);
-			list.add(map);
-		}
-		Page page = new Page(pageNumber,pageSize,120);
-		page.setRows(list);
-		
-		this.epage = page.getUIPage();
+		System.out.println("数据:"+page+"-"+rows);
+		TotoImgs totoImgs = new TotoImgs();
+		this.epage = totoImgsService.findImgs(totoImgs, page, rows);
 		return "jsonstr";
 	}
+	
+	 
+	public int getPage() {
+		return page;
+	}
 
-	
-	
-	
-	public int getPageNumber() {
-		return pageNumber;
+	public void setPage(int page) {
+		this.page = page;
 	}
-	public void setPageNumber(int pageNumber) {
-		this.pageNumber = pageNumber;
+
+	public int getRows() {
+		return rows;
 	}
-	public int getPageSize() {
-		return pageSize;
-	}
-	public void setPageSize(int pageSize) {
-		this.pageSize = pageSize;
+
+	public void setRows(int rows) {
+		this.rows = rows;
 	}
 
 	public EasyUIPage getEpage() {
@@ -56,6 +50,14 @@ public class FileManagerAction {
 
 	public void setEpage(EasyUIPage epage) {
 		this.epage = epage;
+	}
+
+	public TotoImgsService getTotoImgsService() {
+		return totoImgsService;
+	}
+
+	public void setTotoImgsService(TotoImgsService totoImgsService) {
+		this.totoImgsService = totoImgsService;
 	}
 
 }

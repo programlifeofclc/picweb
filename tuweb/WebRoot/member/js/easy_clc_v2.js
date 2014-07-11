@@ -20,6 +20,15 @@ $.extend($.fn.datebox.defaults,{
 	  }
 });
 
+$.extend($.fn.pagination.defaults, {
+			beforePageText : '页数',
+			afterPageText : '共{pages}',
+			displayMsg : '从{from} 到 {to}，共 {total}条'
+		});
+
+
+
+
 $.extend({
 			// 当树形使用简单数据类型时候使用
 			convert : function(rows, id, parentId) {
@@ -85,7 +94,6 @@ $.fn.extend({
 		// 表格配置
 		var dfOpts = {
 			fit : true,
-			pageNumber:1,
 			fitColumns : true,
 			nowrap : true,
 			pagination : true,
@@ -94,35 +102,12 @@ $.fn.extend({
 			rownumbers : true,
 			loadMsg : " 加载中.... ",
 			loadFilter : function(data) {
-				alert(data.pageNumber);
-				if (dfOpts.pagination) {
-					var dfOps = {
-								showRefresh : false,
-								beforePageText : '页数',
-								afterPageText : '共{pages}',
-								displayMsg : '从{from} 到 {to}，共 {total}条',
-								onSelectPage : function(pages, pageSize) {
-									var queryParams = thiz.datagrid("options").queryParams;
-									// 合并查找对象
-									$.extend(queryParams, {
-												pageSize : pageSize,
-												pageNumber : pages
-											});
-									// 加载指定页面数据
-									thiz.datagrid('load', queryParams);
-									}
-							}
-					$.extend(dfOps,psetting?psetting:{});
-					thiz.datagrid('getPager').pagination(dfOps);
-				}
 				return data;
 			}
 		};
 		// 初始化表格
 		$.extend(dfOpts, setting ? setting : {});
 		thiz.datagrid(dfOpts);
-		
-		
 		return thiz;
 	}
 

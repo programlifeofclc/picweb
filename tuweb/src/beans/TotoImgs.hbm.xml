@@ -12,5 +12,6 @@
 <property column="img_uploader" length="20" name="imgUploader" type="java.lang.String"/>
 <property column="http_url" length="255" name="httpUrl" type="java.lang.String"/>
 <property column="key_word" length="255" name="keyWord" type="java.lang.String"/>
+<property column="theme_ids" length="200" name="themeIds" type="java.lang.String"></property>
 </class>
 </hibernate-mapping>

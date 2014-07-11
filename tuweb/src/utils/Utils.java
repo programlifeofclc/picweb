@@ -15,6 +15,11 @@ public class Utils {
 		return true;
 	}
 	
+	/**
+	 * 检测是不是空  非空为true
+	 * @param o
+	 * @return
+	 */
 	public static boolean checkNNList(List<?> o){
 		if(o == null)return false;
 		if(o.size()==0) return false;

@@ -7,12 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="/member/js/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="/member/css/uploadify.css">
 	<link rel="stylesheet" type="text/css" href="/member/css/upload.css">
-
-	
 	<script type="text/javascript" src="/member/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="/member/js/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="/member/js/jquery.uploadify.min.js"></script>
 	<script type="text/javascript" src="/member/js/easy_clc_v2.js"></script>
+	<script type="text/javascript" src="/member/js/jquery.uploadify.min.js"></script>
 	
 	<script type="text/javascript">
 		$(function(){
@@ -22,13 +20,13 @@
 					"id" : 1,
 					"text" : "后台",
 					"children" : [{
-									"id" : 2,
-									"text" : "上传图片",
-									"attributes":{name:"上传图片",url:"/member/upload_img.jsp"}
-								},{
 									"id" : 3,
 									"text" : "图片管理",
 									"attributes":{name:"图片管理",url:"/member/img_manager.jsp"}
+								},{
+									"id" : 4,
+									"text" : "主题管理",
+									"attributes":{name:"主题管理",url:"/member/theme_manager.jsp"}
 								}]
 					},{
 					"id" : 1,
@@ -54,12 +52,21 @@
 				if(isexists){
 					$("#main_tab").tabs("select",node.name);
 				}else{
-					$("#main_tab").tabs("add",{
-						title:node.name,
-						closable:true,
-						href:node.url,
-						loadingMessage:'加载中......'
-					});
+					if(node.target == "frame"){
+						$("#main_tab").tabs("add",{
+							title:node.name,
+							closable:true,
+							content:'<div style="width:100%;height:100%;overflow: hidden;"><iframe scrolling="auto" frameborder="0"  src="' + node.url + '" style="width:100%;height:100%"></iframe></div>',
+							loadingMessage:'加载中......'
+						});
+					}else{
+						$("#main_tab").tabs("add",{
+							title:node.name,
+							closable:true,
+							href:node.url,
+							loadingMessage:'加载中......'
+						});
+					}
 				}
 			}
 		});

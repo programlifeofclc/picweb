@@ -14,14 +14,10 @@ public class Page {
 	private int counts = 0;//总条数
 	private List<?> rows;
 	public Page(){};
-	public Page(int pageSize,int counts){
-		this.pageSize = pageSize;
-		this.counts = counts;
-	}
 	
 	public Page(int pageNumber,int pageSize,int counts){
-		this.pageNumber = pageNumber;
-		this.pageSize = pageSize;
+		this.pageNumber = pageNumber==0?1:pageNumber;
+		this.pageSize = pageSize==0?10:pageSize;
 		this.counts = counts;
 	}
 	

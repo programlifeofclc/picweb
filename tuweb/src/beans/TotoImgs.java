@@ -35,8 +35,11 @@ public class TotoImgs implements Serializable {
     private String keyWord;
 
     private String basePath;
+    
+    private String themeIds;
+    
     /** full constructor */
-    public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime, String imgUploader, String httpUrl, String keyWord) {
+    public TotoImgs(String imgName, String imgContext, String imgUrl, Date createTime, String imgUploader, String httpUrl, String keyWord,String themeIds) {
         this.imgName = imgName;
         this.imgContext = imgContext;
         this.imgUrl = imgUrl;
@@ -44,6 +47,7 @@ public class TotoImgs implements Serializable {
         this.imgUploader = imgUploader;
         this.httpUrl = httpUrl;
         this.keyWord = keyWord;
+        this.themeIds = themeIds;
     }
 
     /** default constructor */
@@ -148,4 +152,12 @@ public class TotoImgs implements Serializable {
             .toHashCode();
     }
 
+	public String getThemeIds() {
+		return themeIds;
+	}
+
+	public void setThemeIds(String themeIds) {
+		this.themeIds = themeIds;
+	}
+    
 }
