@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import utils.BeanScope;
@@ -14,6 +15,7 @@ import beans.User;
 
 import com.toto.www.service.owner.LoginService;
 
+@Scope("prototype")
 @Controller("loginAction")
 public class LoginAction implements SessionAware{
 	

@@ -3,14 +3,14 @@
 <html>
 <head>
 	<title>html5</title>
-	<link rel="stylesheet" type="text/css" href="/member/js/themes/pepper-grinder/easyui.css">
-	<link rel="stylesheet" type="text/css" href="/member/js/themes/icon.css">
-	<link rel="stylesheet" type="text/css" href="/member/css/uploadify.css">
-	<link rel="stylesheet" type="text/css" href="/member/css/upload.css">
-	<script type="text/javascript" src="/member/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/member/js/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="/member/js/easy_clc_v2.js"></script>
-	<script type="text/javascript" src="/member/js/jquery.uploadify.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/back_js/themes/pepper-grinder/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/back_js/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="/back_css/uploadify.css">
+	<link rel="stylesheet" type="text/css" href="/back_css/upload.css">
+	<script type="text/javascript" src="/back_js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/back_js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/back_js/easy_clc_v2.js"></script>
+	<script type="text/javascript" src="/back_js/jquery.uploadify.min.js"></script>
 	
 	<script type="text/javascript">
 		$(function(){
@@ -51,6 +51,7 @@
 				var isexists = $("#main_tab").tabs("exists",node.name);
 				if(isexists){
 					$("#main_tab").tabs("select",node.name);
+					//$("#main_tab").tabs("getSelected").panel("refresh");
 				}else{
 					if(node.target == "frame"){
 						$("#main_tab").tabs("add",{
@@ -75,7 +76,7 @@
 	</script>
 </head>
 <body class="easyui-layout">
-	<div data-options="region:'north'" style="overflow:hidden;height:50px;background-image:url('/member/img/header_bg.png');background-position:0% 100%">
+	<div data-options="region:'north'" style="overflow:hidden;height:50px;background-image:url('/back_img/header_bg.png');background-position:0% 100%">
 		<h2 style="color: white;margin-left: 30px;font-weight:bolder; font-family:'YouYuan' ">萌丫头后台管理系统</h2>
 	</div>
 	<div data-options="region:'west'" title="菜单管理" style="width:240px;padding1:1px;overflow:hidden;">

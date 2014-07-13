@@ -22,7 +22,7 @@ public class TotoImgsService extends BaseService{
 		if(toto != null){
 			if(toto.getThemeIds() != null){
 				list.add( "%" + toto.getThemeIds() + "%");
-				hql += "and t.themeIds like ? ";
+				hql += " and t.themeIds like ? ";
 			}
 		}
 		hql += " order by createTime desc ";
@@ -32,26 +32,6 @@ public class TotoImgsService extends BaseService{
 		page.setRows(imglist);
 		return page.getUIPage();
 	}
-	
-	
-	
-	@SuppressWarnings("unchecked")
-	public List<TotoImgs> findTotoImgs(TotoImgs toto){
-		String sql = " select t from  TotoImgs t where 1=1 ";
-		List<Object> list = new ArrayList<Object>();
-		if(toto != null){
-			if(toto.getThemeIds() != null){
-				list.add( "%" + toto.getThemeIds() + "%");
-				sql += "and t.themeIds like ? ";
-			}
-		}
-		return  (List<TotoImgs>)baseDao.findHqlList(sql,list,1,1);
-	}
-	
-	
-	
-	
-	
 	
 	
 }

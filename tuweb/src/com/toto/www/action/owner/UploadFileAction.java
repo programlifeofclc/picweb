@@ -8,12 +8,14 @@ import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import beans.TotoImgs;
 
 import com.toto.www.service.owner.UploadService;
 
+@Scope("prototype")
 @Controller("uploadFileAction")
 public class UploadFileAction {
 	Logger log = Logger.getLogger(this.getClass());

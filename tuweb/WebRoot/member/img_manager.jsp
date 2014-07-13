@@ -16,15 +16,16 @@
 			
 			var dfOpts = {
 					nowrap:false,
-					url:"/file/findImgs.htm",
-					columns:[[{field:'imgName',title:'图片名',width:60},
+					url:"/manager/file/findImgs.htm",
+					columns:[[{field:'id',title:'ID',width:30},
+					          {field:'imgName',title:'图片名',width:60},
 					          {field:'slt',title:'缩略图',width:32,align:'center',formatter:slt},
 					          {field:'createTime',title:'时间',width:100,align:'center',formatter:function(v){return v.replace('T',' ');}},
 					          {field:'imgUrl',title:'路径',width:100,align:'center'},
 					          {field:'imgContext',title:'内容',width:100,align:'center'},
 					          {field:'imgUploader',title:'操作人',width:100,align:'center'}
 					         ]],
-					queryParams:{pp:33}
+					queryParams:{}
 					
 				};
 			$("#tt").datagrid_clc(dfOpts);
@@ -44,8 +45,8 @@
 				"buttonText":"选择文件",
 				'buttonClass':"myup",
 				'auto':false,
-				'swf'      : '/member/css/uploadify.swf',
-				'uploader' : '/upload/uploadFile.htm',
+				'swf'      : '/back_css/uploadify.swf',
+				'uploader' : '/manager/upload/uploadFile.htm',
 				'onCancel' : function(file) {
 		          //  alert('The file ' + file.name + ' was cancelled.');
 		        }
@@ -59,11 +60,6 @@
 		
 		
 	</script>
-	<style type="text/css">
-		#tt td{
-				vertical-align:middle;
-		}
-	</style>
 	
 	<div class="easyui-layout" style="width: 100%;height: 100%;">
 		<div data-options="region:'center'" class="easyui-layout" style="overflow: hidden;">
@@ -87,9 +83,7 @@
 				</table>
 			</div>
 			<div data-options="region:'center'">
-				<div id="file_upload-queue" 
-					class="uploadify-queue" 
-					style="width: 100%;overflow:auto;color:#000">
+				<div id="file_upload-queue" class="uploadify-queue"  style="width: 100%;overflow:auto;color:#000">
 				</div>
 			</div>
 		</div>
