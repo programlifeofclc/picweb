@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test.html</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <link  rel="stylesheet" type="text/css" href="css.css"/>
+    <script src="./js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="jquery.transform-0.6.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function doMoveDiv(main_id,open_id,flag,close_id){
+			var mainId = $("#"+main_id);
+			var openId = $("#"+open_id);
+			var closeId = $("#"+close_id);
+			if(flag == 1){
+				var width = openId.width();
+				alert(mainId.html());
+				 	mainId.css( 'transform', 'translate(-100px,100px)' );
+			}
+		
+		}
+	
+	$(function(){
+		$("#ads").click(function(){
+		doMoveDiv("main_box","id222",1,"w");
+		});
+			
+		
+	})
+	</script>
+  </head>
+  
+  <body  style="background: #333">
+  		<div id="displayNone" style="display: none;">
+    		<div id="id111" style="width:300px;height: 1000px;background:green;">123456</div>
+    		<div id="id222" style="width:300px;height: 1000px;background:#890776;">123456</div>
+    	</div>
+    	<div id="main_box" style="background: #888;height:1000px;">
+    		<div id='ads' style="width:200px;height: 200px;background:red;margin:0px auto;">asdf</div>
+    		<div style="width:200px;height: 200px;background:white;margin:10px auto;">asdf</div>
+    	</div>
+  </body>
+</html>
