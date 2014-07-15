@@ -12,20 +12,11 @@
 				var img = "<img style='margin-top:6px;' src='/"+rowData.imgUrl+"/img_32_32.jpg'/>"
 				return img;
 			}
-			
-			
-			var keyWordEdit = {type:'numberbox'};
-			
-			
-			
-			
-			
-			
-			
-			
+			 
 			
 			var dfOpts = {
-					//singleSelect:false,
+					singleSelect:false,
+					idField: 'id',
 					nowrap:false,
 					remoteSort:false,
 					url:"/manager/file/findImgs.htm",
@@ -40,8 +31,11 @@
 					          {field:'imgUploader',title:'操作人',width:100,align:'center'}
 					         ]],
 					queryParams:{},
-					editors:{ text: { init: function(container, options){ var input = $('<input type="text" class="datagrid-editable-input">').appendTo(container); return input; }, getValue: function(target){ return $(target).val(); }, setValue: function(target, value){ $(target).val(value); }, resize: function(target, width){ var input = $(target); if ($.boxModel == true){ input.width(width - (input.outerWidth() - input.width())); } else { input.width(width); } } } }
-					
+					onDblClickRow:function(i, data){
+						data.editing = true;
+						$("#tt").datagrid("beginEdit",i);
+						
+					}
 				};
 			$("#tt").datagrid_clc(dfOpts);
 			
