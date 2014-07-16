@@ -101,7 +101,10 @@
 							var i = $("#tt").datagrid("getRowIndex",row);
 							$("#tt").datagrid("cancelEdit",i);
 						}
-					}]
+					}],
+					onDblClickRow:function(index,data){
+						$("#tt").datagrid("beginEdit",index);
+					}
 				};
 			$("#tt").datagrid_clc(dfOpts);
 			
