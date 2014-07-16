@@ -84,7 +84,9 @@
 									url:"/manager/file/updateImg.htm",
 									data:dat,
 									success:function(data){
-										alert(data);
+										if($.trim(data)!="success"){
+											$.messager.alert('提示:','保存失败!');
+										}
 									},
 									dataType:"text",
 									type:"POST"
