@@ -2,6 +2,10 @@
 <!doctype html>
 <html>
 <head>
+	<%
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+	%>
 	<title>图片管理</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -66,7 +70,27 @@
 							var i = $("#tt").datagrid("getRowIndex",row);
 							$("#tt").datagrid("endEdit",i);
 							var changarr = $("#tt").datagrid("getChanges","updated");
-							console.log(changarr[0])
+							for(var i = 0; i < changarr.length;i++){
+								var img = changarr[i];
+								var dat = {
+											"totoImgs.id":img.id,
+											"totoImgs.imgContext":img.imgContext,
+											"totoImgs.keyWord":img.keyWord,
+											"totoImgs.themeIds":img.themeIds
+											};
+								
+								$.ajax({
+									async:false,
+									url:"/manager/file/updateImg.htm",
+									data:dat,
+									success:function(data){
+										alert(data);
+									},
+									dataType:"text",
+									type:"POST"
+								});
+							}
+							$("#tt").datagrid("acceptChanges");
 						}
 					},'-',{
 						text:'取消编辑',
