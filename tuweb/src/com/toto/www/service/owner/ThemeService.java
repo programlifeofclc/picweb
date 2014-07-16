@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import utils.EasyUIPage;
 import utils.Page;
 import beans.ImgTheme;
+import beans.TotoImgs;
 
 import com.toto.www.service.BaseService;
 
@@ -55,6 +56,18 @@ public class ThemeService extends BaseService{
 			return theme;
 		else
 			return (ImgTheme)baseDao.saveOrUpdate(theme);
+	}
+	
+	public TotoImgs updateTotoImg(TotoImgs totoImgs){
+		TotoImgs toimg = (TotoImgs)baseDao.get(TotoImgs.class, totoImgs.getId());
+		if(toimg != null){
+			toimg.setThemeIds(totoImgs.getThemeIds());
+			toimg.setImgContext(totoImgs.getImgContext());
+			toimg.setKeyWord(totoImgs.getKeyWord());
+			return toimg;
+		}else{
+			return null;
+		}
 	}
 	
 }

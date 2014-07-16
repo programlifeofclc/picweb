@@ -7,16 +7,17 @@
 </head>
 <body>
 	<script type="text/javascript">
+	
 		(function($){
 			function slt(value,rowData,rowIndex){
 				var img = "<img style='margin-top:6px;' src='/"+rowData.imgUrl+"/img_32_32.jpg'/>"
 				return img;
 			}
-			 
 			
 			var dfOpts = {
-					singleSelect:false,
+					singleSelect:true,
 					idField: 'id',
+					striped:true,
 					nowrap:false,
 					remoteSort:false,
 					url:"/manager/file/findImgs.htm",
@@ -25,19 +26,59 @@
 					          {field:'slt',title:'缩略图',width:32,align:'center',formatter:slt},
 					          {field:'createTime',title:'时间',width:70,align:'center',formatter:function(v){return v.substr(0,9);}},
 					          {field:'imgUrl',title:'路径',width:100,align:'center'},
-					          {field:'themeIds',title:'主题',width:100,align:'center'},
-					          {field:'keyWord',title:'关键字',width:100,align:'center',editor:"numberbox"},
-					          {field:'imgContext',title:'内容',width:100,align:'center'},
-					          {field:'imgUploader',title:'操作人',width:100,align:'center'}
+					          {field:'themeIds',title:'主题',width:100,align:'center',
+					          		editor:{
+					          			type:'combobox',
+					          			options:{
+					          				value:"",
+					          				url:'/manager/file/findThemesComboBox.htm',
+					          				valueField:'themeName',
+					          				textField:'themeName',
+					          				multiple:true,
+					          				editable:false,
+					          				onLoadSuccess: function(val){
+					          	              var vs = $(this).combobox("getValues");
+					          	              if(vs==""){return;}
+					          	              $(this).combobox("clear");
+					          	              vs = (vs+"").split(",");
+					          	          	  $(this).combobox("setValues",vs);
+					          	            }
+					          			}
+					          		}
+					          		
+					          },
+					          {field:'keyWord',title:'关键字',width:100,align:'center',editor:"text"},
+					          {field:'imgContext',title:'内容',width:100,align:'center',editor:'textarea'},
+					          {field:'imgUploader',title:'操作人',width:30,align:'center'}
 					         ]],
 					queryParams:{},
-					onDblClickRow:function(i, data){
-						data.editing = true;
-						$("#tt").datagrid("beginEdit",i);
-						
-					}
+					toolbar:[{
+						text:'编辑选中',
+						handler:function(){
+							var row = $("#tt").datagrid("getSelected");
+							var i = $("#tt").datagrid("getRowIndex",row);
+							$("#tt").datagrid("beginEdit",i);
+						}
+					},'-',{
+						text:'保存编辑',
+						handler:function(){
+							var row = $("#tt").datagrid("getSelected");
+							var i = $("#tt").datagrid("getRowIndex",row);
+							$("#tt").datagrid("endEdit",i);
+							var changarr = $("#tt").datagrid("getChanges","updated");
+							console.log(changarr[0])
+						}
+					},'-',{
+						text:'取消编辑',
+						handler:function(){
+							var row = $("#tt").datagrid("getSelected");
+							var i = $("#tt").datagrid("getRowIndex",row);
+							$("#tt").datagrid("cancelEdit",i);
+						}
+					}]
 				};
 			$("#tt").datagrid_clc(dfOpts);
+			
 			
 			
 			$('#file_upload').uploadify({
@@ -46,7 +87,7 @@
 				'queueSizeLimit' : 50,
 				"height":30,
 				"width":"100%",
-				"formData":{},
+				"formData":{"a":"2"},
 				"fileTypeDesc":"图片...",
 				"fileTypeExts":"*.gif; *.jpg; *.png",
 				"fileSizeLimit":"1000K",
@@ -56,17 +97,22 @@
 				'auto':false,
 				'swf'      : '/back_css/uploadify.swf',
 				'uploader' : '/manager/upload/uploadFile.htm',
-				'onCancel' : function(file) {
-		          //  alert('The file ' + file.name + ' was cancelled.');
-		        }
+				'onCancel' : function(file) {}
 			});
 			
-			
+			$("#start_upload").click(function(e){
+				var val = $("#themecom").combobox("getValues");
+				val = val.toString();
+				if(val==""){
+					$.messager.alert('提示:','请选择主题');
+					return;
+				}
+				$('#file_upload').uploadify('settings','formData',{themeIds:val})
+				$('#file_upload').uploadify('upload','*');
+			})
 			
 			
 		})($);
-	
-		
 		
 	</script>
 	
@@ -74,19 +120,23 @@
 		<div data-options="region:'center'" class="easyui-layout" style="overflow: hidden;">
 			<div data-options="region:'center'">
 				<table id="tt" >
-				
 				</table>
 			</div>
 		</div>
 		<div data-options="region:'east'"  style="width:215px;overflow: hidden;" class="easyui-layout">
-			<div data-options="region:'north'" style="height:40px;overflow: hidden;">
+			<div data-options="region:'north'" style="height:80px;overflow: hidden;">
 				<table class='mytabimg'>
 					<tr>
 						<td>
 							<input id="file_upload" name="file_upload" type="file">
 						</td>
 						<td>
-							<input id="start_upload"  value="开始上传" type="button" onclick="$('#file_upload').uploadify('upload','*')" >
+							<input id="start_upload"  value="开始上传" type="button" >
+						</td>
+					</tr>
+					<tr>					
+						<td colspan="2" style="text-align: center;">
+								<span>主题:</span><input id="themecom" style="width:160px" class="easyui-combobox" name="themes" data-options="url:'/manager/file/findThemesComboBox.htm',valueField:'themeName',textField:'themeName',multiple:true,editable:false">
 						</td>
 					</tr>
 				</table>

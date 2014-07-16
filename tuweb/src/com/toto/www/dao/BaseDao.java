@@ -39,6 +39,7 @@ public class BaseDao{
 		return o;
 	}
 	
+	
 	@SuppressWarnings("unchecked")
 	public List<?> findHqlList(final String hql,final List<?> values,final int offset,final int limit){
 		return hibernateTemplate.execute(new HibernateCallback() {
@@ -50,8 +51,10 @@ public class BaseDao{
 						query.setParameter(i, values.get(i));
 					}
 				}
-				query.setFirstResult(offset);
-				query.setMaxResults(limit);
+				if(!(offset < 0 || limit < 0)){
+					query.setFirstResult(offset);
+					query.setMaxResults(limit);
+				}
 				List<?> list = query.list();
 				return list;
 			}

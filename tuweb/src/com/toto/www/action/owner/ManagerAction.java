@@ -1,14 +1,14 @@
 package com.toto.www.action.owner;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.annotation.Resource;
-
-import net.sf.json.JSONObject;
 
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+
 import beans.ImgTheme;
 import beans.TotoImgs;
 
@@ -21,7 +21,8 @@ public class ManagerAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	Logger log = Logger.getLogger(this.getClass());
 	private ImgTheme imgTheme;
-
+	private TotoImgs totoImgs;
+	
 	@Resource(name="totoImgsService")
 	private TotoImgsService totoImgsService;
 	
@@ -52,6 +53,18 @@ public class ManagerAction extends BaseAction{
 		return "jsonstr";
 	}
 	
+	/**
+	 * 查询全部主题
+	 * @return
+	 */
+	public String findThemesComboBox()throws IOException{
+		System.out.println("数据:"+ test);
+		ImgTheme theme = new ImgTheme();
+		List<ImgTheme> list = themeService.findThemeList(theme, -1, -1);
+		print16String(array2JSONString(list));
+		return null;
+	}
+	
 	
 	/**
 	 * 添加主题
@@ -73,6 +86,29 @@ public class ManagerAction extends BaseAction{
 			print16String("{}");
 			return null;
 		}
+	}
+	
+	/**
+	 * 更新主题
+	 * @return
+	 * @throws IOException 
+	 */
+	public String updateImg() throws IOException{
+		getReq().setCharacterEncoding("utf-8");
+		getRes().setCharacterEncoding("utf-8");
+		getRes().setContentType("text/html;charset=utf-8");
+		
+		if(totoImgs != null && totoImgs.getId()!=null){
+			TotoImgs img = themeService.updateTotoImg(totoImgs);
+			if(img != null){
+				print16String("success");
+			}else{
+				print16String("error");
+			}
+		}else{
+			print16String("error");
+		}
+		return null;
 	}
 	
 	
@@ -99,5 +135,12 @@ public class ManagerAction extends BaseAction{
 	public void setImgTheme(ImgTheme imgTheme) {
 		this.imgTheme = imgTheme;
 	}
-	
+
+	public TotoImgs getTotoImgs() {
+		return totoImgs;
+	}
+
+	public void setTotoImgs(TotoImgs totoImgs) {
+		this.totoImgs = totoImgs;
+	}
 }

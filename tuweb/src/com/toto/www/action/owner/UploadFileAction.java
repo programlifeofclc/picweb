@@ -30,6 +30,7 @@ public class UploadFileAction {
 	private String imgName;
 	private UploadService uploadService;
 	private String imgRootPath;
+	private String themeIds;
 	
 	public String uploadFile() throws IOException{
 		String path = ServletActionContext.getRequest().getRealPath("/");
@@ -41,6 +42,7 @@ public class UploadFileAction {
 		totoimg.setImgUploader("clc");
 		totoimg.setImgUrl(imgRootPath);
 		totoimg.setBasePath(path);
+		totoimg.setThemeIds(themeIds);
 		try{
 		uploadService.saveImg(uploadFile,totoimg);
 		}catch(Exception e){
@@ -48,9 +50,6 @@ public class UploadFileAction {
 		}
 		return null;
 	}
-	
-	
-	
 	
 	
 	
@@ -124,5 +123,14 @@ public class UploadFileAction {
 	public void setImgRootPath(String imgRootPath) {
 		this.imgRootPath = imgRootPath;
 	}
+
+	public String getThemeIds() {
+		return themeIds;
+	}
+
+	public void setThemeIds(String themeIds) {
+		this.themeIds = themeIds;
+	}
+	
 	
 }
