@@ -62,6 +62,8 @@
                 <value>beans/User.hbm.xml</value>
                 <value>beans/TotoImgs.hbm.xml</value>
                 <value>beans/ImgTheme.hbm.xml</value>
+                <value>beans/Module.hbm.xml</value>
+                <value>beans/PageModule.hbm.xml</value>
             </list>
         </property>  
         <property name="hibernateProperties">  

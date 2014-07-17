@@ -2,6 +2,10 @@ package utils;
 
 import java.util.List;
 
+/**
+ * 静态工具类
+ * @author clc
+ */
 public class Utils {
 	
 	/**

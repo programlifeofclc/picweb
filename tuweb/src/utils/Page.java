@@ -7,7 +7,10 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonValueProcessor;
-
+/**
+ * 分页工具类
+ * @author clc
+ */
 public class Page {
 	private int pageNumber = 1;//当前页数
 	private int pageSize = 10;//每页条数

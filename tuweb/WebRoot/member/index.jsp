@@ -33,11 +33,9 @@
 					"text" : "前台",
 					"state" : "closed",
 					"children" : [{
-									"id" : "j1",
-									"text" : "Java"
-								},{
-									"id" : "j2",
-									"text" : "C#"
+									"id" : 5,
+									"text" : "页面控制",
+									"attributes":{name:"页面控制",url:"/member/page_manager.jsp"}
 								}]
 					}],
 					onClick:function(node){

@@ -9,6 +9,10 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+/**
+ * 编码类过滤器
+ * @author clc
+ */
 public class CodeFilter implements Filter {
 
 	public void destroy() {

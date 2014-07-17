@@ -2,6 +2,10 @@ package utils;
 
 import java.util.List;
 
+/**
+ * easyui分页使用工具
+ * @author clc
+ */
 public class EasyUIPage {
 	private int pageNumber = 1;//当前页数
 	private int pageSize = 10;//每页条数

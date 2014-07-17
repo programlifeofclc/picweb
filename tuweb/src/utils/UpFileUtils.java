@@ -10,6 +10,10 @@ import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.Thumbnails.Builder;
 import net.coobird.thumbnailator.geometry.Positions;
 
+/**
+ * 图片上次工具
+ * @author clc
+ */
 public class UpFileUtils {
 	static Random r = new Random();
 	
