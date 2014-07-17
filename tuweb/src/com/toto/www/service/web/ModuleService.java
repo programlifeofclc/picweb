@@ -31,5 +31,9 @@ public class ModuleService extends BaseService {
 		return (Module)baseDao.get(Module.class, module.getId());
 	}
 	
-	
+	public Module findModuleAndImg(Module module){
+		if(module == null || module.getId() == null) return null;
+		String sql = "select t from Module t,PageModule p ,TotoImgs g where t.id=? and t. ";
+		return (Module)baseDao.get(Module.class, module.getId());
+	}
 }
