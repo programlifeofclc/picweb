@@ -5,7 +5,7 @@
   version="2.0">
   
   <tlib-version>1.0</tlib-version>
-  <uri>module</uri>
+  <uri>/module</uri>
   
   <tag>
 		<description>模版</description>
@@ -15,8 +15,22 @@
 		<attribute>
 			<name>id</name>
 			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>alt</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>style</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>className</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
 		</attribute>
 	</tag>
-  
-
 </taglib>

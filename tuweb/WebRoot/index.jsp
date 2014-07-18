@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="md" uri="/module" %>
 <!doctype html>
 <html>
 <head>
@@ -79,8 +80,7 @@
 </head>
 <body style="background:#DDD">
 	<div class="logo">
-		萌丫图
-	
+		<md:mod id="1" style="width:600px;height:70px"></md:mod>
 	</div>
 	
 	<div class="daohang_outer">

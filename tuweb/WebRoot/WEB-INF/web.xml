@@ -5,7 +5,14 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
+ 
+  <jsp-config>
+   <taglib>
+    <taglib-uri>/module</taglib-uri>
+  		<taglib-location>/WEB-INF/module.tld</taglib-location>
+   </taglib>
+  </jsp-config>
+ 
   <filter>
   	<filter-name>chinachar</filter-name>
   	<filter-class>base.servlet.CodeFilter</filter-class>
@@ -38,4 +45,5 @@
   <session-config>  
       <session-timeout>20</session-timeout>  
   </session-config>
+  
 </web-app>
