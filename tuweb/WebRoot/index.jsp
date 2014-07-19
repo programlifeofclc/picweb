@@ -101,9 +101,12 @@
 			<input type="text" name="search" class="search"><input type="text"  name="search" class="search_button" onclick="this.blur();alert(1);" >
 		</div>
 		
-		<div class="context_left_1" id="context_left_1" style="float: left;"></div>
+		<div class="context_left_1" id="context_left_1" style="float: left;width:900px;height:450px"></div>
 		<div class="context_right_1" id="context_right_1"  >
-		
+			<ul>
+				
+			
+			</ul>
 		</div>
 		<div class="clear_div"></div>
 		<div class="context_text" style="margin-top: 3px;" >
