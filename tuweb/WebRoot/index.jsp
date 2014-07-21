@@ -23,53 +23,7 @@
 			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
 			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
 			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/2.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/1.jpg"},{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/1.jpg"},
-			     									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/2.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/3.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/3.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/3.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"},
-			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/2.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"}]
+			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"}]
 			});
 			
 		 
@@ -101,11 +55,15 @@
 			<input type="text" name="search" class="search"><input type="text"  name="search" class="search_button" onclick="this.blur();alert(1);" >
 		</div>
 		
-		<div class="context_left_1" id="context_left_1" style="float: left;width:900px;height:450px"></div>
+		<div class="context_left_1" id="context_left_1" style="float: left;width:640px;height:320px"></div>
 		<div class="context_right_1" id="context_right_1"  >
-			<ul>
-				
-			
+			<div class="context_right_ul">
+				<li>asdf</li>
+				<li>asdf</li>
+				<li>asdf</li>
+				<li>asdf</li>
+				<li>asdf</li>
+				<li>a</li>
 			</ul>
 		</div>
 		<div class="clear_div"></div>

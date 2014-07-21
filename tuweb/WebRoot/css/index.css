@@ -78,8 +78,8 @@
 }
 
 .context_right_1{
-	width: 296px;
-	height: 450px;
+	width: 556px;
+	height: 320px;
 	float:right;
 	border:10px #EEE solid;
 	box-shadow: 0px 0px 2px #264E03;
@@ -126,4 +126,14 @@
 }
 .clear_div{
 	clear: both;
+}
+.context_right_ul{
+	list-style: none;
+	width: 200px;
+	height: 100%;
+}
+.context_right_ul li{
+	background:#999;
+	width: 100%;
+	
 }
