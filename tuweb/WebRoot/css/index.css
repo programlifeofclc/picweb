@@ -132,8 +132,23 @@
 	width: 200px;
 	height: 100%;
 }
-.context_right_ul li{
-	background:#999;
-	width: 100%;
-	
+.context_right_ul .divli{
+	width: 200px;
+	height:18px;
+	font-size: 12px;
+	line-height:18px;
+	white-space:nowrap;
+	overflow:hidden;
+	padding-left:5px;
+	background:#EEEEEE;
+	border:1px #FFF solid;
+	border-left: 1px #EEE solid;
+	border-right: 1px #EEE solid;
+	box-shadow: 0px 0px 4px #5F851C;
+	border-radius:3px 18px 18px 3px;
+	border: none;
+	margin:2px 0px;
+}
+.context_right_ul .divli:HOVER{
+	background:#3281C4;
 }
