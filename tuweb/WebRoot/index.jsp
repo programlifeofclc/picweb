@@ -9,8 +9,8 @@
 	<link  rel="stylesheet" type="text/css" href="./css/jquery-ext.css"/>
 	
 	<script src="./js/jquery-1.11.1.js" type="text/javascript"></script>
-	<script src="./js/jquery.mousewheel.js" type="text/javascript"></script>
 	<script src="./js/jquery-ext.js" type="text/javascript"></script>
+	<script src="./js/index.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(function(){
 			var c = $(".context_left_1").cBox({leftDiv2:true,data:[{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/1.jpg",bigsrc:"/tuweb/dataImg/big/1.jpg"},
@@ -26,9 +26,10 @@
 			    									{title:"标题",text:"我的主题",src:"/tuweb/dataImg/small/4.jpg",bigsrc:"/tuweb/dataImg/big/4.jpg"}]
 			});
 			
-		 
 		})
 	
+		
+		
 	</script>
 	
 </head>
@@ -36,8 +37,7 @@
 	<div class="logo">
 		<md:mod id="1" style="width:600px;height:70px"></md:mod>
 	</div>
-	
-	<div class="daohang_outer">
+	<div class="daohang_outer" >
 		<div class="daohang_inner">
 			<ul class="daohang_ul">
 				<li> 首页 </li>
@@ -58,28 +58,56 @@
 		<div class="context_left_1" id="context_left_1" style="float: left;width:640px;height:320px"></div>
 		<div class="context_right_1" id="context_right_1"  >
 			
-			<div class="context_right_ul">
-				 <div class="divli">
-				 	天台年我的情愿asdfas
-				 	asdf
-				 </div>
-				 <div class="divli">
-				 	天台年我的情愿艾丝凡asdf
-				 </div>
-				 <div class="divli">
-				 	天台年我的情愿唉唉ad司法所地方aasdfasdfasdfasdfsdfadsfadsf
-				 </div>
-				 <div class="divli"></div>
-				 <div class="divli"></div>
-				 <div class="divli"></div>
-				 <div class="divli"></div>
+			<div id="box_right" class="context_right_ul">
+				 <section class="divli">
+				 	<h4>天台年我的情愿asdfas</h4>
+				 	<article>
+				 		天台年我的情愿asdfas
+				 		asdf
+				 	</article>
+				 </section>
+				 <section class="divli">
+				 	<h4>天台年我的情愿asdfas</h4>
+				 	<article>
+				 		天台年我的情愿asdfas
+				 		asdf
+				 	</article>
+				 </section>
+				 <section class="divli">
+				 	<h4>天台年我的情愿asdfas</h4>
+				 	<article>
+				 		天台年我的情愿asdfas
+				 		asdf
+				 	</article>
+				 </section>
+				 <section class="divli">
+				 	<h4>天台年我的情愿asdfas</h4>
+				 	<article>
+				 		天台年我的情愿asdfas
+				 		asdf
+				 	</article>
+				 </section>
 			</div>
 		</div>
 		<div class="clear_div"></div>
 		<div class="context_text" style="margin-top: 3px;" >
 		
 		</div>
-		
+		adsf
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br>
+		<a href="#sss"  >asdf</a>
 	</div>
 	
 
